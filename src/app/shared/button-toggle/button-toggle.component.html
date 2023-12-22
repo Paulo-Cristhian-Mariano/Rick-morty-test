@@ -1,0 +1,24 @@
+<!-- <mat-button-toggle-group #group="matButtonToggleGroup" value="inicio">
+    <mat-button-toggle value="inicio" aria-label="inicio">
+        <mat-icon>home</mat-icon>
+        Início
+    </mat-button-toggle>
+    <mat-button-toggle class='base-btn' value="favoritos" aria-label="favoritos">
+        <mat-icon>favorite</mat-icon>
+        Favoritos
+        <div class="badge">3</div>
+    </mat-button-toggle>
+    
+</mat-button-toggle-group> -->
+<!-- <div class="example-selected-value">Selected value: {{group.value}}</div> -->
+<div class="selector">
+    <div class="selector__inicio" [class.selector__favoritos--active]="urlAtual=='/inicio'" (click)="changeUrlAtual('inicio')"> 
+        <mat-icon class='selector__icon'>home</mat-icon>
+        Início 
+    </div>
+    <div class="selector__favoritos" [class.selector__favoritos--active]="urlAtual=='/favoritos'" (click)="changeUrlAtual('favoritos')"> 
+        <mat-icon class="selector__icon">favorite</mat-icon>
+        Favoritos
+        <div class="selector__favoritos__badge">3</div>
+    </div>
+</div>

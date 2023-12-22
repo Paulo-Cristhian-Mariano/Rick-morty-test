@@ -1,0 +1,42 @@
+// light  theme
+$first-black: #0A0A0A;
+$first-gray: #1F1F1F;
+$second-gray: #3D3D3D;
+$third-gray: #A4A4A4;
+$four-gray: #CACACA;
+$first-white: #FFFFFF;
+$first-green: #B2DF28;
+$first-blue: #00B5CC;
+
+// Dark theme
+$first-black-dark: #bd1616;
+$first-gray-dark: #681111;
+$second-gray-dark: #74c21b;
+$third-gray-dark: #1e1780;
+$four-gray-dark: #CACACA;
+$first-white-dark: rgb(155, 48, 48);
+$first-green-dark: #B2DF28;
+$first-blue-dark: #00B5CC;
+
+:root {
+    --first-black: #{$first-black};
+    --first-gray: #{$first-gray};
+    --second-gray: #{$second-gray};
+    --third-gray: #{$third-gray};
+    --four-gray: #{$four-gray};
+    --first-white: #{$first-white};
+    --first-green: #{$first-green};
+    --first-blue: #{$first-blue};
+}
+
+
+.dark {
+    --first-black: #{$first-black-dark};
+    --first-gray: #{$first-gray-dark};
+    --second-gray: #{$second-gray-dark};
+    --third-gray: #{$third-gray-dark};
+    --four-gray: #{$four-gray};
+    --first-white: #{$first-white-dark};
+    --first-green-dark: #{$first-green-dark};
+    --first-blue-dark: #{$first-blue-dark};
+}

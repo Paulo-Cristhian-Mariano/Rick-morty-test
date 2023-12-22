@@ -1,0 +1,47 @@
+// @use '@angular/material' as mat;
+// @include mat.core();
+
+// .inp-busca .mat-form-field-wrapper{
+//   padding-bottom: 0px;
+// }
+
+// $mat-green-mottu: (
+//     50: var(--soft-green),
+//     100: #bfffb2,
+//     200: #8fff80,
+//     300: #5cff4d,
+//     400: #26ff31,
+//     500: #00ff00,
+//     600: #32fb00,
+//     700: #00f514,
+//     800: #1cef00,
+//     900: #08e600,
+//     A100: #80ff8b,
+//     A200: #46ff40,
+//     A400: rgb(9, 255, 0),
+//     A700: #00ff0d,
+//     contrast: (
+//       50: $dark-primary-text,
+//       100: $dark-primary-text,
+//       200: $dark-primary-text,
+//       300: $dark-primary-text,
+//       400: $dark-primary-text,
+//       500: $dark-primary-text,
+//       600: $dark-primary-text,
+//       700: $dark-primary-text,
+//       800: $light-primary-text,
+//       900: $light-primary-text,
+//       A100: $dark-primary-text,
+//       A200: $dark-primary-text,
+//       A400: $dark-primary-text,
+//       A700: black,
+//     )
+//   );
+
+// // Mottu theme
+// $mottu-primary: mat-palette($mat-green-mottu, 50);
+// $mottu-accent:  mat-palette($mat-amber, A200, A100, A400);
+// $mottu-warn:    mat-palette($mat-deep-green);
+
+// $mottu-theme:   mat-light-theme($mottu-primary, $mottu-accent, $mottu-warn);
+// @include angular-material-theme($mottu-theme);

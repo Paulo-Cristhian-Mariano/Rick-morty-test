@@ -1,0 +1,44 @@
+<div class="header">
+    <p class="header__title">
+        INÍCIO
+    </p>
+
+    <div class="header__form-group">
+        <input id="inpSearch" class='header__form-group__input' type="text" placeholder=" " [(ngModel)]="inpSearch"
+            (keydown)="onKeydown($event)">
+        <label (click)="focoInput()" class="header__form-group__label">Pesquisar</label>
+    </div>
+</div>
+
+<div *ngIf="!characters || (characters.results).length < 1" class="dont-result">
+    <div>
+        <p class="dont-result__title">Nada foi encontrado</p>
+        <p class="dont-result__text">Tente realizar uma nova busca.</p>
+    </div>
+</div>
+
+
+<div *ngIf="characters && (characters.results).length > 0" class="grid">
+    <div *ngFor="let character of characters['results']" class='cols-root'>
+        <div class="card">
+            <div class="card__image"
+                [style.background]="'url(' + (character.image? character.image : 'https://rickandmortyapi.com/api/character/avatar/19.jpeg') + ')'">
+                <mat-icon class="icon-heart">favorite_outline</mat-icon>
+            </div>
+            <div class="card-body">
+                <h5 class="card-title">{{ character.name? character.name: 'Desconhecido'}}</h5>
+                <p class="card-text">{{ character.species? character.species: ''}}</p>
+                <p class="card-text">{{ character.type? character.type: ''}}</p>
+            </div>
+        </div>
+    </div>
+    <div class="pagination">
+        <div></div>
+        <div class="pagination__arrows">
+            <mat-icon [class.disabled]='actualPage == 1' (click)="changePage('prev')">keyboard_arrow_left</mat-icon>
+            <div class="pagination__page">{{ actualPage +"/"+ totalPages }}</div>
+            <mat-icon [class.disabled]='actualPage == totalPages' (click)="changePage('next')">keyboard_arrow_right</mat-icon>
+        </div>
+    </div>
+</div>
+<br>
